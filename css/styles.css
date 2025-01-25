@@ -597,7 +597,6 @@ address a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
   background: #fcfcfc;
@@ -606,6 +605,7 @@ address a {
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
 }
 
 .close-button {
@@ -635,6 +635,10 @@ address a {
 .close-button:hover .close-icon,
 .close-button:focus .close-icon {
   fill: #ffffff;
+}
+
+.close-icon{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -703,8 +707,9 @@ address a {
   border-radius: 4px;
   resize: none;
   outline: transparent;
-  padding-left: 16px;
-  padding-top: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea:focus {
@@ -737,11 +742,11 @@ address a {
   transform: translateY(-50%);
 }
 
-.form-label span.checkbox {
-  display: inline-block;
+.form-label span{
+  display: inline-flex;
 }
 
-.form-label:checked + .checkbox {
+.input-privacy:checked + .checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
