@@ -743,7 +743,7 @@ address a {
   transform: translateY(-50%);
 }
 
-.input-privacy:checked + .checkbox {
+.input-privacy:checked + .form-label {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
